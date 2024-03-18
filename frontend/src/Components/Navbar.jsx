@@ -1,6 +1,9 @@
 import React from "react";
 import "../styles/Navbar.css";
 import homebg from "../assets/bg.png";
+import map from "../assets/map.png";
+import homevideo from "../assets/homepagevideo.mp4";
+import testuser from "../assets/Ellipse 19.png";
 function Navbar() {
   return (
     <>
@@ -18,6 +21,7 @@ function Navbar() {
           <a className="navbar_textelemnt">About</a>
           <a className="navbar_textelemnt">Support</a>
           <a className="navbar_textelemnt">Forums</a>
+         
         </div>
       </div>
       <div className="middle_spacer"></div>
@@ -75,50 +79,215 @@ function Navbar() {
       <div className="homepage_feature_maindiv">
         <p className="homepage_features_heading">Discover a Healthier You</p>
         <div className="homepage_feature_container">
-            <div className="homepage_feature_contentdiv 1">
-                <div className="homepage_features_content_image"></div>
-                <div className="homepage_features_content_heading">Hydration Made Easy:<br></br>Track & Stay On Top</div>
-                <div className="homepage_features_content_tagline">Smart Reminders & Tracking - <br></br>Never Miss a Sip, Stay Hydrated!</div>
+          <div className="homepage_feature_contentdiv 1">
+            <div className="homepage_features_content_image 1"></div>
+            <div className="homepage_features_content_heading">
+              Hydration Made Easy:<br></br>Track & Stay On Top
             </div>
-            <div className="homepage_feature_contentdiv 2">
-                <div className="homepage_features_content_image"></div>
-                <div className="homepage_features_content_heading">Track It All: <br></br> Calories, Macros & Micros </div>
-                <div className="homepage_features_content_tagline">Master Your Nutrition with <br></br> Detailed Insights & Control</div>
+            <div className="homepage_features_content_tagline">
+              Smart Reminders & Tracking - <br></br>Never Miss a Sip, Stay
+              Hydrated!
             </div>
-            <div className="homepage_feature_contentdiv 3">
-                <div className="homepage_features_content_image"></div>
-                <div className="homepage_features_content_heading">Your Personalized Diet: <br></br> Crafted for You</div>
-                <div className="homepage_features_content_tagline">BMI-Based Plans to Reach Your <br></br> Goals Faster</div>
+          </div>
+          <div className="homepage_feature_contentdiv 2">
+            <div className="homepage_features_content_image 2"></div>
+            <div className="homepage_features_content_heading">
+              Track It All: <br></br> Calories, Macros & Micros 
             </div>
-            <div className="homepage_feature_contentdiv 4">
-                <div className="homepage_features_content_image"></div>
-                <div className="homepage_features_content_heading"> BMI and Fat Calculator</div>
-                <div className="homepage_features_content_tagline">Precise BMI & Fat % Calculations -<br></br> Track Progress for Results</div>
+            <div className="homepage_features_content_tagline">
+              Master Your Nutrition with <br></br> Detailed Insights & Control
             </div>
-            <div className="homepage_feature_contentdiv 5">
-                <div className="homepage_features_content_image"></div>
-                <div className="homepage_features_content_heading">Monthly Reports and <br></br> Disease Risk Assessment</div>
-                <div className="homepage_features_content_tagline">Detailed Reports & Proactive <br></br> Risk Assessment </div>
+          </div>
+          <div className="homepage_feature_contentdiv 3">
+            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_heading">
+              Your Personalized Diet: <br></br> Crafted for You
             </div>
-            <div className="homepage_feature_contentdiv 6">
-                <div className="homepage_features_content_image"></div>
-                <div className="homepage_features_content_heading">Social Platform for <br></br> Sharing and Chat</div>
-                <div className="homepage_features_content_tagline">Motivate Each Other on Your <br></br> Health Journey Together</div>
+            <div className="homepage_features_content_tagline">
+              BMI-Based Plans to Reach Your <br></br> Goals Faster
             </div>
+          </div>
+          <div className="homepage_feature_contentdiv 4">
+            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_heading">
+              {" "}
+              BMI and Fat Calculator
+            </div>
+            <div className="homepage_features_content_tagline">
+              Precise BMI & Fat % Calculations -<br></br> Track Progress for
+              Results
+            </div>
+          </div>
+          <div className="homepage_feature_contentdiv 5">
+            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_heading">
+              Monthly Reports and <br></br> Disease Risk Assessment
+            </div>
+            <div className="homepage_features_content_tagline">
+              Detailed Reports & Proactive <br></br> Risk Assessment{" "}
+            </div>
+          </div>
+          <div className="homepage_feature_contentdiv 6">
+            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_heading">
+              Social Platform for <br></br> Sharing and Chat
+            </div>
+            <div className="homepage_features_content_tagline">
+              Motivate Each Other on Your <br></br> Health Journey Together
+            </div>
+          </div>
         </div>
       </div>
       <div className="homepage_aboutwebsite_maindiv">
         <div className="homepage_about_videodiv">
-
+          <video controls={true} className="vieo_homepage">
+            <source src={homevideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
         <div className="homepage_aboutus_textdiv">
-            <h1>What is NutriWave?</h1>
-            <div className="homepage_aboutus_textdiv_context" >
-            <p>NutriWave offers a comprehensive solution to your health and nutrition needs, simplifying your path to wellness. With our platform, you can easily track your calorie intake, ensuring you meet daily nutritional targets and cultivate healthy eating habits. Our belief in the power of small, consistent changes guides our approach, allowing you to monitor progress over time and make informed decisions about your diet and lifestyle. Join our community today and embark on a transformative journey towards a healthier, happier you with NutriWave by your side.</p>
-            </div>
-            <div className="homepage_getstarted_button"><em><i></i><i></i><i></i><i></i><i></i><i></i></em><span>Getstarted</span></div>
-
+          <h1>What is NutriWave?</h1>
+          <div className="homepage_aboutus_textdiv_context">
+            <p>
+              NutriWave offers a comprehensive solution to your health and
+              nutrition needs, simplifying your path to wellness. With our
+              platform, you can easily track your calorie intake, ensuring you
+              meet daily nutritional targets and cultivate healthy eating
+              habits. Our belief in the power of small, consistent changes
+              guides our approach, allowing you to monitor progress over time
+              and make informed decisions about your diet and lifestyle. Join
+              our community today and embark on a transformative journey towards
+              a healthier, happier you with NutriWave by your side.
+            </p>
+          </div>
+          <div className="homepage_getstarted_button">
+            <em>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+              <i></i>
+            </em>
+            <span>Getstarted</span>
+          </div>
         </div>
+      </div>
+      <div className="homepage_networking_maindiv">
+        <div className="homepage_networking_maindiv_text">
+          <p>
+            CREATE A GOOD <span className="colore_red">RELATIONSHIP</span> WITH{" "}
+            <br></br>
+            USERS THAT LAST <span className="colore_red">FOREVER</span>
+          </p>
+        </div>
+        <div className="homepage_networking_maindiv_img">
+          <img src={map} alt="" />
+        </div>
+        <div className="homepage_hotspot_features">
+          <div className="homepage_hotspot_features_images_div"></div>
+          <div className="homepage_hotspot_features_hotspot"></div>
+        </div>
+      </div>
+      <div className="key_features_homepage_maindiv">
+        <div className="key_features_homepage_maindiv_images">
+          <div className="key_features_homepage_maindiv_mainimage"></div>
+        </div>
+        <div className="key_features_homepage_maindiv_text"></div>
+      </div>
+      <div className="homepage_joinnow_main div">
+        <div className="joinnow_text_div">
+          Missing something from your plate? Track your food & uncover missing
+          vitamins & minerals.
+        </div>
+        <button id="join_now">Join now</button>
+      </div>
+      <div className="homepage_feedback_maindiv">
+        <h1>What Our customers say</h1>
+        <div className="homepage_customer_review_maindiv">
+          <div className="homepage_customer_review">
+            <p className="reviews_heading">“The best restaurant”</p>
+            <p className="reviews_taglines">
+              Last night, we dined at place and were simply blown away. From the
+              moment we stepped in, we were enveloped in an inviting atmosphere
+              and greeted with warm smiles.
+            </p>
+            <div className="reviews_line"></div>
+            <div className="homepage_user_profile">
+              <img className="homepage_reviews_user_image" src={testuser} />
+              <p className="homepage_reviews_user_name">Sophire Robson</p>
+            </div>
+          </div>
+          <div className="homepage_customer_review">
+            <p className="reviews_heading">“The best restaurant”</p>
+            <p className="reviews_taglines">
+              Last night, we dined at place and were simply blown away. From the
+              moment we stepped in, we were enveloped in an inviting atmosphere
+              and greeted with warm smiles.
+            </p>
+            <div className="reviews_line"></div>
+            <div className="homepage_user_profile">
+              <img className="homepage_reviews_user_image" src={testuser} />
+              <p className="homepage_reviews_user_name">Sophire Robson</p>
+            </div>
+          </div>
+          <div className="homepage_customer_review">
+            <p className="reviews_heading">“The best restaurant”</p>
+            <p className="reviews_taglines">
+              Last night, we dined at place and were simply blown away. From the
+              moment we stepped in, we were enveloped in an inviting atmosphere
+              and greeted with warm smiles.
+            </p>
+            <div className="reviews_line"></div>
+            <div className="homepage_user_profile">
+              <img className="homepage_reviews_user_image" src={testuser} />
+              <p className="homepage_reviews_user_name">Sophire Robson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="homepage_footer">
+        <div className="hompage_footer_description">
+          <h3 className="homepage_footer_heading">NutriWave</h3>
+          <p>
+            Empowering your journey to health with precision tracking and
+            personalized insights.
+          </p>
+          <div className="homepage_footer_socailmeadia"></div>
+        </div>
+        <div className="hompage_footer_aboutus">
+          <h3 className="homepage_footer_sideheading">About us</h3>
+          <div>
+            <p>Creator</p>
+            <p>About us</p>
+            <p>Contact</p>
+            <p>Work with us</p>
+          </div>
+        </div>
+        <div className="hompage_footer_company">
+          <h3 className="homepage_footer_sideheading">Company</h3>
+          <div>
+            <p>Patnership</p>
+            <p>Terms of use</p>
+            <p>Contribute</p>
+            <p>Privacy</p>
+          </div>
+        </div>
+        <div className="hompage_footer_getintouch">
+          <h3 className="homepage_footer_heading">Get in touch</h3>
+          <p>
+            Stay updated with our latest news, tips, and offers. Subscribe to
+            our newsletter!
+          </p>
+          <div className="homepage_newsletter">
+            <input type="text" placeholder=" Email address" />
+            <button>Subscribe</button>
+          </div>
+        </div>
+        
+      </div>
+      <div className="homepage_copyright">
+      Copyright © 2023 Nutriwave
       </div>
     </>
   );
