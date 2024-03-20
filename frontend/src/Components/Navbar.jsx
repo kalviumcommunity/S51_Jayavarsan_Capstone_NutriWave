@@ -9,8 +9,9 @@ function Navbar() {
     <>
       <div className="navbar_maindiv">
         <div className="navbar_logodiv">
-          <div className="navbar_logo">logo</div>
-          <span className="navbar_name">NutriWave</span>
+          <div className="navbar_logo">
+          </div>
+          {/* <span className="navbar_name">NutriWave</span> */}
         </div>
         <div className="navbar_aboutdiv">
           <a className="navbar_textelemnt">Home</a>
@@ -79,8 +80,8 @@ function Navbar() {
       <div className="homepage_feature_maindiv">
         <p className="homepage_features_heading">Discover a Healthier You</p>
         <div className="homepage_feature_container">
-          <div className="homepage_feature_contentdiv 1">
-            <div className="homepage_features_content_image 1"></div>
+          <div className="homepage_feature_contentdiv 1"> 
+            <div className="homepage_features_content_image " id="i1"></div>
             <div className="homepage_features_content_heading">
               Hydration Made Easy:<br></br>Track & Stay On Top
             </div>
@@ -90,7 +91,7 @@ function Navbar() {
             </div>
           </div>
           <div className="homepage_feature_contentdiv 2">
-            <div className="homepage_features_content_image 2"></div>
+            <div className="homepage_features_content_image " id="i2" ></div>
             <div className="homepage_features_content_heading">
               Track It All: <br></br> Calories, Macros & Micros 
             </div>
@@ -99,7 +100,7 @@ function Navbar() {
             </div>
           </div>
           <div className="homepage_feature_contentdiv 3">
-            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_image" id="i3"></div>
             <div className="homepage_features_content_heading">
               Your Personalized Diet: <br></br> Crafted for You
             </div>
@@ -108,7 +109,7 @@ function Navbar() {
             </div>
           </div>
           <div className="homepage_feature_contentdiv 4">
-            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_image" id="i4"></div>
             <div className="homepage_features_content_heading">
               {" "}
               BMI and Fat Calculator
@@ -119,7 +120,7 @@ function Navbar() {
             </div>
           </div>
           <div className="homepage_feature_contentdiv 5">
-            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_image" id="i5"></div>
             <div className="homepage_features_content_heading">
               Monthly Reports and <br></br> Disease Risk Assessment
             </div>
@@ -128,7 +129,7 @@ function Navbar() {
             </div>
           </div>
           <div className="homepage_feature_contentdiv 6">
-            <div className="homepage_features_content_image"></div>
+            <div className="homepage_features_content_image" id="i6"></div>
             <div className="homepage_features_content_heading">
               Social Platform for <br></br> Sharing and Chat
             </div>
