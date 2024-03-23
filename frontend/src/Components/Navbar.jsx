@@ -5,6 +5,8 @@ import map from "../assets/map.png";
 import homevideo from "../assets/homepagevideo.mp4";
 import testuser from "../assets/Ellipse 19.png";
 function Navbar() {
+    
+    
   return (
     <>
       <div className="navbar_maindiv">
@@ -14,7 +16,7 @@ function Navbar() {
           {/* <span className="navbar_name">NutriWave</span> */}
         </div>
         <div className="navbar_aboutdiv">
-          <a className="navbar_textelemnt">Home</a>
+          <a onClick= {(e) => {window.location.reload()}} className="navbar_textelemnt">Home</a>
           <select className="navbar_textelemnt">
             <option>Collections</option>
             <option>need to add</option>
@@ -36,8 +38,9 @@ function Navbar() {
             Dive into NutriWave<br></br>
             Where Every Calorie Counts Towards Your Success
           </div>
-          <div className="wrapper">
-            <a className="cta" href="#">
+          <div className="wrapper" >
+            {/* havt to use link in future ----------uodation needed here in buttons branch */}
+            <a className="cta" href="signup"> 
               <span className="heading_name">Start Your Journey</span>
               <span>
                 <svg
@@ -139,7 +142,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-      <div className="homepage_aboutwebsite_maindiv">
+      <div  id="about" className="homepage_aboutwebsite_maindiv">
         <div className="homepage_about_videodiv">
           <video controls={true} className="vieo_homepage">
             <source src={homevideo} type="video/mp4" />
