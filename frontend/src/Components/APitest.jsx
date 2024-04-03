@@ -32,7 +32,7 @@ const APITest = () => {
 
   return (
     <div>
-      <h1>Nutritionix API Example</h1>
+      <h1>NutriWave API Example</h1>
       <input
         type="text"
         placeholder="Enter a food item"
