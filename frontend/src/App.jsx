@@ -7,14 +7,14 @@ import Dashboard from "./Dashboard";
 
 function App() {
   return (
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<Navbar />} />
-    //     <Route path="/signup" element={<Signup />} />
-    //   </Routes>
-    // </BrowserRouter>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Navbar />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+    </BrowserRouter>
     // < APitest/>
-    < Dashboard/>
+    // < Dashboard/>
   );
 }
 
