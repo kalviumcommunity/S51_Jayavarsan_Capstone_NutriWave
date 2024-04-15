@@ -17,9 +17,9 @@ mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use(express.json());
 
-app.get('/', (req, res) => {
-  res.send("This is nutriWave. Wait for updates.");
-});
+// app.get('/', (req, res) => {
+//   res.send("This is nutriWave. Wait for updates.");
+// });
 
 app.listen(process.env.PORT, () => {
   console.log("Nutriwave server started running on port 3000");
