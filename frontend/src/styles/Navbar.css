@@ -670,3 +670,13 @@ select{
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .homebanner_heading{
+        font-size: 10px;
+    }
+
+}
