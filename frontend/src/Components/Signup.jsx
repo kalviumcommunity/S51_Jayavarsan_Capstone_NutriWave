@@ -17,7 +17,7 @@ function Signup() {
             </div>
           </div>
           <div className='signup_form_mainsignup_option_div'> 
-
+ 
           </div>
         </div>
       </div>

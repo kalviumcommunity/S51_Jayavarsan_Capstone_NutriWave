@@ -11,7 +11,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.3",
+    "cros": "^1.0.1",
+    "express": "^4.19.2",
+    "joi": "^17.12.3",
+    "joi-password-complexity": "^5.2.0",
+    "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
     "moongose": "^1.0.0",
     "node": "^21.7.1",
