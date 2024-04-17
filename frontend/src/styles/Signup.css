@@ -83,6 +83,8 @@
 .signup_form_mainsignup_option_div_forum input{
     display: block;
     height: 7%;
+    border: 0.5px solid grey;
+    border-radius: 5px;
 }
 .signup_form_mainsignup_option_div_forum label{
     margin-top: 5px;
@@ -98,16 +100,31 @@
 }
 .signup_details_fields input{
     width: 90%;
-    height: 40%;
+    height: 45%;
     border-radius: 5px;
+    border: 0.5px solid grey;
 }
 .signup_main_button{
-    height: 10%;
+    height: 30px;
+    width: 40%;
+    border-radius: 15px;
+    background-color: #4C5FFF;
+    border: none;
+    color: white;
+
 }
 
+.button-container-signuppage{
+    /* border: 1px solid black; */
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
 
-
-
+.google_facebook_signup{
+    display: flex;
+    width: 30%;
+}
 
 @media only screen and (max-width: 768px) {
     .signup_banner_div {

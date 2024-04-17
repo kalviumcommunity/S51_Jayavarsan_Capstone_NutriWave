@@ -59,7 +59,7 @@ function Signup() {
               <input
                 type="text"
                 name="name"
-                placeholder="Name"
+                placeholder="ex: John Doe"
                 value={formData.name}
                 onChange={handleChange}
               />
@@ -67,7 +67,7 @@ function Signup() {
               <input
                 type="text"
                 name="username"
-                placeholder="Username"
+                placeholder="ex: johnnydoe94"
                 value={formData.username}
                 onChange={handleChange}
               />
@@ -75,7 +75,7 @@ function Signup() {
               <input
                 type="email"
                 name="email"
-                placeholder="Email"
+                placeholder="ex: John@nutriwave.com"
                 value={formData.email}
                 onChange={handleChange}
               />
@@ -85,7 +85,7 @@ function Signup() {
                 <input
                   type="number"
                   name="age"
-                  placeholder="Age"
+                  placeholder=" 18"
                   value={formData.age}
                   onChange={handleChange}
                 />
@@ -95,7 +95,7 @@ function Signup() {
                 <input
                   type="number"
                   name="weight"
-                  placeholder="Weight (kg)"
+                  placeholder=" 70(kg)"
                   value={formData.weight}
                   onChange={handleChange}
                 />
@@ -105,7 +105,7 @@ function Signup() {
                 <input
                   type="number"
                   name="height"
-                  placeholder="Height (cm)"
+                  placeholder=" 180(cm)"
                   value={formData.height}
                   onChange={handleChange}
                 />
@@ -115,12 +115,18 @@ function Signup() {
               <input
                 type="password"
                 name="password"
-                placeholder="Password"
+                placeholder=" Password"
                 value={formData.password}
                 onChange={handleChange}
               />
-
-              <button className="signup_main_button" type="submit">Sign Up</button>
+              <div className="button-container-signuppage">
+               <button className="signup_main_button" type="submit">Sign Up</button>
+               <span>Or</span>
+               <div className="google_facebook_signup">
+                <div>G</div>
+                <div>F</div>
+               </div>
+              </div>
             </form>
           </div>
         </div>
