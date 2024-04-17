@@ -79,38 +79,7 @@ function Signup() {
                 value={formData.email}
                 onChange={handleChange}
               />
-              <div className="signup_details_fields">
-                <div>
-                <label>Age</label>
-                <input
-                  type="number"
-                  name="age"
-                  placeholder=" 18"
-                  value={formData.age}
-                  onChange={handleChange}
-                />
-                </div>
-                <div>
-                <label>Weight</label>
-                <input
-                  type="number"
-                  name="weight"
-                  placeholder=" 70(kg)"
-                  value={formData.weight}
-                  onChange={handleChange}
-                />
-                </div>
-                <div>
-                <label>Height</label>
-                <input
-                  type="number"
-                  name="height"
-                  placeholder=" 180(cm)"
-                  value={formData.height}
-                  onChange={handleChange}
-                />
-                </div>
-              </div>
+             
               <label>Password</label>
               <input
                 type="password"
