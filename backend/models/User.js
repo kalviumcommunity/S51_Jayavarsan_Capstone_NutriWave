@@ -10,9 +10,9 @@ const userSchema = new mongoose.Schema({
     Emailid:{ type:String,required:true },   //email id of the user
     Password:{type:String,required:true}  ,   //password for the user to login   
     Username:{type: String , required : true},
-    Age:{type: Int32 , required : true},
-    Height: {type: Int32 , required : true},
-    Weight: {type: Int32 , required : true},
+    Age:{type: String , required : true},
+    Height: {type: String , required : true},
+    Weight: {type: String , required : true},
 })
 
 userSchema.methods.generateAuthtoken = function(){

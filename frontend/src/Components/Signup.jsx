@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/Signup.css";
 import banner from "../assets/signupbanner.png";
 import backicon from "../assets/back.png";
@@ -14,20 +14,31 @@ function Signup() {
     weight: "",
     height: "",
   });
+  const [error, setError] = useState("");
+	const navigate = useNavigate();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  };
+	const handleChange = ({ currentTarget: input }) => {
+		setFormData({ ...formData, [input.name]: input.value });
+	};
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here, you can send the form data to an API or perform any necessary actions
-    console.log(formData);
-  };
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+			const url = "http://localhost:3000/api/users";
+			const { formData: res } = await axios.post(url, formData);
+			navigate("/login");
+			console.log(res.message);
+		} catch (error) {
+			if (
+				error.response &&
+				error.response.status >= 400 &&
+				error.response.status <= 500
+			) {
+				setError(error.response.data.message);
+			}
+		}
+	};
+
 
   return (
     <div className="signup_container_div">
