@@ -1,6 +1,4 @@
-// Front-end (React.js)
 
-// WeightGraph component
 import React, { useState, useEffect } from 'react';
 import Chart from 'chart.js/auto';
 
