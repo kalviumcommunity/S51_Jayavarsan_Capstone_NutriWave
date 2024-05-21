@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Calories = require('../models/Calories');
 
-// Get calories data
 router.get('/', async (req, res) => {
   try {
     const calories = await Calories.findOne();

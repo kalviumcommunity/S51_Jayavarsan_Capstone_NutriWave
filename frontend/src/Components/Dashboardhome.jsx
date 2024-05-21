@@ -5,30 +5,20 @@ import "../styles/dashboardhome.css";
 import tick from '../assets/check.png'
 
 function Dashboardhome() {
-  // State for calories data
   const [caloriesData, setCaloriesData] = useState([]);
-
-  // State for water gauge value
   const [waterValue, setWaterValue] = useState(0);
-
-  // State for user's weight data
   const [weightData, setWeightData] = useState({
     current: [],
     expected: [],
   });
 
-  // State to control displaying tick image
   const [showTick, setShowTick] = useState(false);
 
-  // Fetch initial data
   useEffect(() => {
 
     fetchCaloriesData();
-
-    // Fetch weight data from endpoint
     fetchWeightData();
 
-    // Fetch initial weight from local storage (if available)
     const storedWeight = localStorage.getItem("weight");
     if (storedWeight) {
       setWeightData((prevWeightData) => ({
@@ -38,10 +28,9 @@ function Dashboardhome() {
     }
   }, []);
 
-  // Function to fetch calories data from endpoint
   const fetchCaloriesData = async () => {
     try {
-      const response = await fetch("http://localhost:3000/api/calories"); // Assuming /calories is your endpoint
+      const response = await fetch("http://localhost:3000/api/calories"); 
       const data = await response.json();
       setCaloriesData(data);
     } catch (error) {
@@ -50,7 +39,7 @@ function Dashboardhome() {
   };
   const fetchWeightData = async () => {
     try {
-      const response = await fetch("/weight");
+      const response = await fetch("http://localhost:3000/api/weigh");
       const data = await response.json();
       setWeightData(data);
     } catch (error) {
@@ -75,7 +64,7 @@ function Dashboardhome() {
         current: [...prevWeightData.current, newWeight],
       }));
       localStorage.setItem("weight", newWeight); 
-      fetch("/weight", {
+      fetch("http://localhost:3000/api/weight", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
