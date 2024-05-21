@@ -22,7 +22,7 @@ function Dashboardhome() {
 
   // Fetch initial data
   useEffect(() => {
-    // Fetch calories data from endpoint
+
     fetchCaloriesData();
 
     // Fetch weight data from endpoint
@@ -41,18 +41,16 @@ function Dashboardhome() {
   // Function to fetch calories data from endpoint
   const fetchCaloriesData = async () => {
     try {
-      const response = await fetch("/calories"); // Assuming /calories is your endpoint
+      const response = await fetch("http://localhost:3000/api/calories"); // Assuming /calories is your endpoint
       const data = await response.json();
       setCaloriesData(data);
     } catch (error) {
       console.error("Error fetching calories data:", error);
     }
   };
-
-  // Function to fetch weight data from endpoint
   const fetchWeightData = async () => {
     try {
-      const response = await fetch("/weight"); // Assuming /weight is your endpoint
+      const response = await fetch("/weight");
       const data = await response.json();
       setWeightData(data);
     } catch (error) {
@@ -60,17 +58,15 @@ function Dashboardhome() {
     }
   };
 
-  // Function to handle water graph click
+
   const handleWaterClick = () => {
-    setWaterValue((prevValue) => Math.min(prevValue + 5, 100)); // Increase water value by 5%, up to 100%
+    setWaterValue((prevValue) => Math.min(prevValue + 5, 100)); 
     if (waterValue >= 95) {
-      setShowTick(true); // Show tick image when water value reaches 100
+      setShowTick(true); 
     }
   };
-
-  // Function to handle weight graph click
   const handleWeightClick = () => {
-    // Prompt user to input their weight
+
     const weightInput = prompt("Enter your weight:");
     if (weightInput) {
       const newWeight = parseInt(weightInput);
@@ -78,8 +74,7 @@ function Dashboardhome() {
         ...prevWeightData,
         current: [...prevWeightData.current, newWeight],
       }));
-      localStorage.setItem("weight", newWeight); // Store weight in local storage
-      // Post new weight to the endpoint (assuming the endpoint accepts POST requests)
+      localStorage.setItem("weight", newWeight); 
       fetch("/weight", {
         method: "POST",
         headers: {
@@ -118,7 +113,7 @@ function Dashboardhome() {
                   type="number"
                   placeholder="Enter your weight"
                   value={weightData.current[weightData.current.length - 1] || ""}
-                  onChange={() => {}} // Prevent direct editing of the input field
+                  onChange={() => {}} 
                 />
               </div>
               <div className="watergraph_main_div">

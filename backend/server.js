@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const app = express();
 const userRoutes = require('./routes/Users');
 const authRoutes = require('./routes/auth')
+const caloriesRoutes = require('./routes/calories');
 
 
 
@@ -13,6 +14,7 @@ app.use(express.json())
 
 app.use("/api/users",userRoutes);
 app.use("/api/auth",authRoutes)
+app.use("/api/calories", caloriesRoutes);
 
 const uri = process.env.DDURL;
 
