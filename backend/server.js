@@ -6,6 +6,7 @@ const app = express();
 const userRoutes = require('./routes/Users');
 const authRoutes = require('./routes/auth')
 const caloriesRoutes = require('./routes/calories');
+const weightRoutes = require('./routes/weight');
 
 
 
@@ -13,8 +14,9 @@ app.use(express.json())
 // app.use(cros())
 
 app.use("/api/users",userRoutes);
-app.use("/api/auth",authRoutes)
+app.use("/api/auth",authRoutes);
 app.use("/api/calories", caloriesRoutes);
+app.use("/api/weight", weightRoutes);
 
 const uri = process.env.DDURL;
 
