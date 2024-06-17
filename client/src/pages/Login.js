@@ -82,10 +82,10 @@ const Form = () => {
   };
   return (
     <div className="login-container h-screen w-full grid grid-cols-1 md:grid-cols-2">
-      <div className="w-full h-full flex flex-col justify-center items-start">
-        <p className="px-20 text-8xl text-white">CalTrack</p>
-        <p className="px-20 pt-5 text-3xl text-white">Track what you eat.</p>
-        <p className="px-20 py-3 text-3xl text-white">Stay Healthy.</p>
+      <div className="login-text-container w-full h-full flex flex-col justify-center items-start">
+        <p className="px-20 text-8xl text-white">NutriWave</p>
+        <p className="px-20 pt-5 text-3xl text-white">Eat smarter, live brighter.</p>
+        <p className="px-20 py-3 text-3xl text-white">One bite at a time.</p>
       </div>
       <div className="flex flex-col justify-center">
         <form
