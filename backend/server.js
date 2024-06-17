@@ -1,33 +1,45 @@
-require('dotenv').config()
-const express = require('express');
-const mongoose = require('mongoose');
-// const cros =require('cros');
+require("dotenv").config({ path: "./.env" });
+const express = require("express");
+const cors = require("cors");
+const path = require("path");
+const session = require("express-session");
+const MongoDBStore = require("connect-mongodb-session")(session);
+
 const app = express();
-const userRoutes = require('./routes/Users');
-const authRoutes = require('./routes/auth')
-const caloriesRoutes = require('./routes/calories');
-const weightRoutes = require('./routes/weight');
 
+const MAX_AGE = 3 * 60 * 60 * 1000;
 
+const mongoDbStore = new MongoDBStore({
+  uri: process.env.MONGO_URI,
+  collection: "mySessions",
+});
 
-app.use(express.json())
-// app.use(cros())
+const sessionConfig = {
+  secret: "mySessionSecret",
+  name: "session-id",
+  store: mongoDbStore,
+  cookie: {
+    maxAge: MAX_AGE,
+    sameSite: false,
+    secure: false,
+  },
+  resave: true,
+  saveUninitialized: false,
+};
 
-app.use("/api/users",userRoutes);
-app.use("/api/auth",authRoutes);
-app.use("/api/calories", caloriesRoutes);
-app.use("/api/weight", weightRoutes);
-
-const uri = process.env.DDURL;
-
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Connected to MongoDB"))
-  .catch(err => console.error("Error connecting to MongoDB:", err));
-
+//middlewares
 app.use(express.json());
+app.use(cors());
+app.use(session(sessionConfig));
 
+//mongodb connection
+const conn = require("./db/connection.js");
 
+const PORT = process.env.PORT || 5000;
 
-app.listen(process.env.PORT, () => {
-  console.log("Nutriwave server started running on port 3000");
+//routes
+app.use(require("./routes/routes"));
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port :- ${PORT}`);
 });
