@@ -19,3 +19,5 @@ Interactive Community Forum: Engage with a vibrant community of health enthusias
 Nutritional Insights: Dive deep into the nutritional value of your food choices with NutriWave's detailed insights. Understand the impact of your dietary habits on your health and make informed decisions to optimize your nutrition.
 
 Customizable Reminders: Stay on track with your health goals by setting customizable reminders for meal logging, hydration, and exercise. NutriWave ensures that you never miss a beat on your path to better health.
+
+Deployed Link : https://nutriwave.netlify.app/
