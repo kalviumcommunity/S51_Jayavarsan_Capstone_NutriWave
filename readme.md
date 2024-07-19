@@ -20,4 +20,4 @@ Nutritional Insights: Dive deep into the nutritional value of your food choices 
 
 Customizable Reminders: Stay on track with your health goals by setting customizable reminders for meal logging, hydration, and exercise. NutriWave ensures that you never miss a beat on your path to better health.
 
-Deployed Link : https://nutriwave.netlify.app/
+Deployed Link : [https://nutriwave.netlify.app/](https://nutriwave.netlify.app/)
